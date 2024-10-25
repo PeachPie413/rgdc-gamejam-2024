@@ -9,6 +9,18 @@
 
 [node name="Souls" type="Node" parent="."]
 
+[node name="Soul9" parent="Souls" instance=ExtResource("2_3nw2r")]
+position = Vector2(141, -565)
+
+[node name="Soul10" parent="Souls" instance=ExtResource("2_3nw2r")]
+position = Vector2(-2, -660)
+
+[node name="Soul11" parent="Souls" instance=ExtResource("2_3nw2r")]
+position = Vector2(-161, -735)
+
+[node name="Soul12" parent="Souls" instance=ExtResource("2_3nw2r")]
+position = Vector2(96, -834)
+
 [node name="Soul" parent="Souls" instance=ExtResource("2_3nw2r")]
 position = Vector2(5, -125)
 
@@ -32,15 +44,3 @@ position = Vector2(-134, -434)
 
 [node name="Soul8" parent="Souls" instance=ExtResource("2_3nw2r")]
 position = Vector2(-33, -517)
-
-[node name="Soul" parent="." instance=ExtResource("2_3nw2r")]
-position = Vector2(141, -565)
-
-[node name="Soul2" parent="." instance=ExtResource("2_3nw2r")]
-position = Vector2(-2, -660)
-
-[node name="Soul3" parent="." instance=ExtResource("2_3nw2r")]
-position = Vector2(-161, -735)
-
-[node name="Soul4" parent="." instance=ExtResource("2_3nw2r")]
-position = Vector2(96, -834)
