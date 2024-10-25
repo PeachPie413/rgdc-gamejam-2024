@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://cefecf8xwdrr"]
 
-[ext_resource type="Script" path="res://scripts/ghost.gd" id="1_gujqx"]
-[ext_resource type="Texture2D" uid="uid://lcjhoqv4q21m" path="res://sprites/ghost.png" id="2_ud5ji"]
+[ext_resource type="Script" path="res://scripts/ghost.gd" id="1_dewtx"]
+[ext_resource type="Texture2D" uid="uid://lcjhoqv4q21m" path="res://sprites/ghost.png" id="2_lpjn2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_88csg"]
 radius = 18.0
 
-[node name="Ghost" type="Area2D"]
-script = ExtResource("1_gujqx")
+[node name="Soul" type="Area2D"]
+script = ExtResource("1_dewtx")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(0, -1)
-texture = ExtResource("2_ud5ji")
+texture = ExtResource("2_lpjn2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_88csg")
