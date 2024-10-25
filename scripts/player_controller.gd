@@ -6,15 +6,16 @@ extends CharacterBody2D
 
 # maximum speed the player can fall (terminal velocity)
 @export var terminal_velocity: float
-
 # acceleration of the player when they are going up
 @export var upwards_gravity: float
-
 # acceleraton of the player when they are going down
 @export var downwards_velocity: float
 
 # how fast the player jumps up (their initial velocity)
 @export var jump_force: float
+
+# how much to slow time by when dashing
+@export var time_dilation: float
 
 
 
@@ -24,10 +25,16 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
+func _process(delta: float) -> void:
+	slow_time()
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	set_player_velocity(delta)
 	move_and_slide()
+
+
 
 
 # sets the velocity of the player
@@ -47,3 +54,13 @@ func set_player_velocity(delta: float) -> void:
 	# jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = -jump_force
+
+
+
+
+# slows game time if input is pressed
+func slow_time() -> void:
+	if Input.is_action_pressed("dash"):
+		Engine.time_scale = time_dilation
+	else:
+		Engine.time_scale = 1

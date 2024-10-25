@@ -15,6 +15,7 @@ terminal_velocity = 1000.0
 upwards_gravity = 200.0
 downwards_velocity = 400.0
 jump_force = 130.0
+time_dilation = 0.3
 
 [node name="ground" type="StaticBody2D" parent="."]
 position = Vector2(606, 392)
