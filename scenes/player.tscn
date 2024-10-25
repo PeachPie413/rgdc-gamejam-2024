@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bwjnawt8y3w55"]
 
 [ext_resource type="Script" path="res://scripts/player_controller.gd" id="1_78ckb"]
-[ext_resource type="Texture2D" uid="uid://b24p3t1327g8p" path="res://sprites/icon.svg" id="2_e68ts"]
+[ext_resource type="Texture2D" uid="uid://3u01xdkf441v" path="res://sprites/player.png" id="1_r4bwa"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_itodu"]
 radius = 62.0
@@ -13,7 +13,7 @@ script = ExtResource("1_78ckb")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_e68ts")
+texture = ExtResource("1_r4bwa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_itodu")
