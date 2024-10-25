@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7xb0ug68soya"]
+
+[ext_resource type="PackedScene" uid="uid://bwjnawt8y3w55" path="res://scenes/player.tscn" id="1_enwbp"]
+[ext_resource type="Texture2D" uid="uid://nnmwnnqqq1b5" path="res://sprites/wall.png" id="2_6o7bs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pcttw"]
+size = Vector2(537, 20)
+
+[node name="JamieTestScene" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_enwbp")]
+position = Vector2(596, 319)
+horizontal_move_speed = 200.0
+terminal_velocity = 1000.0
+upwards_gravity = 200.0
+downwards_velocity = 400.0
+jump_force = 130.0
+
+[node name="ground" type="StaticBody2D" parent="."]
+position = Vector2(606, 392)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground"]
+shape = SubResource("RectangleShape2D_pcttw")
+
+[node name="Sprite2D" type="Sprite2D" parent="ground"]
+scale = Vector2(10.48, 0.420001)
+texture = ExtResource("2_6o7bs")
+region_enabled = true
+region_rect = Rect2(0, 0, 50, 50)
