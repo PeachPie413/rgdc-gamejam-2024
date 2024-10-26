@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bwjnawt8y3w55"]
+[gd_scene load_steps=6 format=3 uid="uid://bwjnawt8y3w55"]
 
 [ext_resource type="Script" path="res://scripts/player_controller.gd" id="1_78ckb"]
 [ext_resource type="Texture2D" uid="uid://3u01xdkf441v" path="res://sprites/player.png" id="1_r4bwa"]
@@ -8,8 +8,6 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_itodu"]
 radius = 16.0
 height = 32.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_gsi8m"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_78ckb")
@@ -34,8 +32,3 @@ z_index = 100
 scale = Vector2(0.12, 0.12)
 texture = ExtResource("2_e68ts")
 script = ExtResource("3_o5frv")
-
-[node name="Bash Range" type="ShapeCast2D" parent="."]
-shape = SubResource("CircleShape2D_gsi8m")
-collide_with_areas = true
-collide_with_bodies = false
