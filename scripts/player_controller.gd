@@ -31,6 +31,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	slow_time()
+	get_closest_soul()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

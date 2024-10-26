@@ -1,15 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://bwjnawt8y3w55"]
+[gd_scene load_steps=6 format=3 uid="uid://bwjnawt8y3w55"]
 
 [ext_resource type="Script" path="res://scripts/player_controller.gd" id="1_78ckb"]
 [ext_resource type="Texture2D" uid="uid://3u01xdkf441v" path="res://sprites/player.png" id="1_r4bwa"]
-[ext_resource type="Texture2D" uid="uid://bjvkuial7ibsa" path="res://sprites/arrow.png" id="3_h75rw"]
+[ext_resource type="Texture2D" uid="uid://b24p3t1327g8p" path="res://sprites/icon.svg" id="2_e68ts"]
 [ext_resource type="Script" path="res://scripts/targeted_soul_sprite.gd" id="3_o5frv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_itodu"]
 radius = 16.0
 height = 32.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_gsi8m"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_78ckb")
@@ -31,11 +29,6 @@ shape = SubResource("CapsuleShape2D_itodu")
 [node name="Targeted Soul Sprite" type="Sprite2D" parent="."]
 visibility_layer = 512
 z_index = 100
-scale = Vector2(1.87, 1.87)
-texture = ExtResource("3_h75rw")
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("2_e68ts")
 script = ExtResource("3_o5frv")
-
-[node name="Bash Range" type="ShapeCast2D" parent="."]
-shape = SubResource("CircleShape2D_gsi8m")
-collide_with_areas = true
-collide_with_bodies = false
