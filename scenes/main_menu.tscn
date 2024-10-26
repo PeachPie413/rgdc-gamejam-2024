@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=4 uid="uid://b27uaie2m1j1u"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_0br5c"]
-[ext_resource type="PackedScene" path="res://scenes/tile_system.tscn" id="2_2uum2"]
+[ext_resource type="PackedScene" uid="uid://bu47lndb57c34" path="res://scenes/tile_system.tscn" id="2_2uum2"]
 [ext_resource type="Theme" uid="uid://dhxh7jiais5jo" path="res://misc/main_menu_button.tres" id="3_y4afm"]
 
 [node name="MainMenu" type="Control"]

@@ -18,8 +18,12 @@ func _ready() -> void:
 
 
 func load_level(index: int):
+	print(index)
 	remove_all_children()
-	add_child(levels[index].instantiate())
+	var loadedLevel = levels[index].instantiate()
+	add_child(loadedLevel)
+	var exit = loadedLevel.get_node("Exit")
+	exit.door_exit.connect(load_level)
 
 
 # Removes all children of the node

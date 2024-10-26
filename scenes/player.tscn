@@ -25,6 +25,7 @@ bash_speed = 300.0
 [node name="Camera" type="Camera2D" parent="."]
 
 [node name="Sprite" type="Sprite2D" parent="."]
+z_index = 2
 texture = ExtResource("1_r4bwa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
