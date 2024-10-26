@@ -12,11 +12,11 @@ height = 32.0
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_78ckb")
 horizontal_move_speed = 130.0
-terminal_velocity = 20.0
-upwards_gravity = 20.0
-downwards_velocity = 20.0
-jump_force = 20.0
-time_dilation = 20.0
+terminal_velocity = 500.0
+upwards_gravity = 200.0
+downwards_velocity = 300.0
+jump_force = 150.0
+time_dilation = 0.25
 
 [node name="Camera" type="Camera2D" parent="."]
 
