@@ -22,5 +22,14 @@ func _process(delta: float) -> void:
 
 # Called from outside, tells ghost that it has been used for a bash
 func bash() -> void:
-	# delete self
-	self.queue_free()
+	# disable collision shape and sprite, start respawn timer
+	$CollisionShape2D.disabled = true
+	$Sprite.visible = false
+	$"Respawn Timer".start()
+
+
+# respawn the soul
+func respawn() -> void:
+	# re-enable collsion shape and sprite
+	$CollisionShape2D.disabled = false
+	$Sprite.visible = true
