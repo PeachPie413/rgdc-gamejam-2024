@@ -1,7 +1,8 @@
 extends Node2D
 
 var levelPaths = [
-	"res://scenes/levels/level0.tscn"
+	"res://scenes/levels/level0.tscn",
+	"res://scenes/levels/level1.tscn"
 ]
 
 var levels = []
@@ -18,7 +19,7 @@ func _ready() -> void:
 
 func load_level(index: int):
 	remove_all_children()
-	add_child(levels[0].instantiate())
+	add_child(levels[index].instantiate())
 
 
 # Removes all children of the node
