@@ -14,5 +14,5 @@ position = Vector2(0, -24)
 
 [node name="Souls" type="Node" parent="."]
 
-[node name="Soul" parent="." instance=ExtResource("2_3nw2r")]
+[node name="Soul" parent="Souls" instance=ExtResource("2_3nw2r")]
 position = Vector2(218, -110)
