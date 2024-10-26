@@ -11,8 +11,6 @@ extends Sprite2D
 
 func _ready() -> void:
 	player = get_parent()
-	# set "up" direction for looking at stuff
-	
 
 
 func _process(delta: float) -> void:

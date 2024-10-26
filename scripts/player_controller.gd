@@ -138,3 +138,4 @@ func apply_bash() -> void:
 	if Input.is_action_just_released("dash") and targeted_soul != null:
 		velocity = bash_direction * bash_speed
 		targeted_soul.bash()
+		targeted_soul = null # stop targeting the soul
