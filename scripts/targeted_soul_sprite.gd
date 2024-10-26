@@ -11,6 +11,8 @@ extends Sprite2D
 
 func _ready() -> void:
 	player = get_parent()
+	# set "up" direction for looking at stuff
+	
 
 
 func _process(delta: float) -> void:
@@ -20,7 +22,8 @@ func _process(delta: float) -> void:
 		# become visible and set position
 		global_position = player.targeted_soul.global_position
 		visible = true
+		# rotate in direction of bash
+		look_at(global_position + player.bash_direction)
 	else:
 		# hide self
 		visible = false
-		pass

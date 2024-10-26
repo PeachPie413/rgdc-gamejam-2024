@@ -10,6 +10,7 @@ radius = 16.0
 height = 32.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gsi8m"]
+radius = 80.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_78ckb")
@@ -19,6 +20,7 @@ upwards_gravity = 200.0
 downwards_velocity = 300.0
 jump_force = 150.0
 time_dilation = 0.25
+bash_speed = 300.0
 
 [node name="Camera" type="Camera2D" parent="."]
 
@@ -37,5 +39,6 @@ script = ExtResource("3_o5frv")
 
 [node name="Bash Range" type="ShapeCast2D" parent="."]
 shape = SubResource("CircleShape2D_gsi8m")
+target_position = Vector2(0, 0)
 collide_with_areas = true
 collide_with_bodies = false
