@@ -12,11 +12,12 @@ var game_over_scene: PackedScene = load("res://scenes/game_over.tscn")
 var jamie_scene: PackedScene = load("res://scenes/jamie_test_scene.tscn")
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# load the main menu on game start
 	# load_menu()
-	load_game()
+	load_menu()
 	# load jamie's test scene (comment this out)
 	# load_jamie_scene()
 
@@ -24,7 +25,9 @@ func _ready() -> void:
 # Loads the main menu scene, removing any other loaded scene
 func load_menu() -> void:
 	remove_all_children()
-	add_child(menu_scene.instantiate())
+	var game_scene_node: MainMenu = menu_scene.instantiate()
+	add_child(game_scene_node)
+	game_scene_node.game_started.connect(load_game)
 
 
 # Loads the game scene, removing any other loaded scene
