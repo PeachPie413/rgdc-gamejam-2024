@@ -16,7 +16,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var time = Time.get_ticks_msec() / 1000; # Time in seconds
+	var time = Time.get_ticks_msec() / 1000.0; # Time in seconds
 	
 	get_node("Sprite").offset.y = sin(time + offset) * floatieMult
 	
