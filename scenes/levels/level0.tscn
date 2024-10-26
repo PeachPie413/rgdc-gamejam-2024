@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=4 uid="uid://2bb4xuuy8pub"]
+[gd_scene load_steps=5 format=4 uid="uid://2bb4xuuy8pub"]
 
 [ext_resource type="PackedScene" uid="uid://bu47lndb57c34" path="res://scenes/tile_system.tscn" id="1_dcswy"]
 [ext_resource type="PackedScene" uid="uid://cefecf8xwdrr" path="res://scenes/soul.tscn" id="2_3nw2r"]
 [ext_resource type="PackedScene" uid="uid://bwjnawt8y3w55" path="res://scenes/player.tscn" id="3_6nmek"]
+[ext_resource type="PackedScene" uid="uid://bdqbp4uemywty" path="res://scenes/exit_door.tscn" id="4_jtw6l"]
 
 [node name="Level0" type="Node2D"]
 
@@ -16,3 +17,6 @@ position = Vector2(0, -24)
 
 [node name="Soul" parent="Souls" instance=ExtResource("2_3nw2r")]
 position = Vector2(218, -110)
+
+[node name="Exit_Door" parent="." instance=ExtResource("4_jtw6l")]
+position = Vector2(448, -208)
