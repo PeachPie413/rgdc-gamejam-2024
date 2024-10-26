@@ -1,8 +1,11 @@
-extends CollisionShape2D
+extends Area2D
 
 @onready var rng = RandomNumberGenerator.new()
+
+# Amount soul floats up and down by
 @export var floatieMult = 5
 var offset
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,6 +18,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var time = Time.get_ticks_msec() / 1000; # Time in seconds
 	
-	self.offset.y = sin(time + offset) * floatieMult
+	get_node("Sprite").offset.y = sin(time + offset) * floatieMult
 	
 	pass

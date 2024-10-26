@@ -16,12 +16,12 @@ var jamie_scene: PackedScene = load("res://scenes/jamie_test_scene.tscn")
 func _ready() -> void:
 	# load the main menu on game start
 	# load_menu()
-	
+	load_game()
 	# load jamie's test scene (comment this out)
-	load_jamie_scene()
+	# load_jamie_scene()
 
 
-# Loads the mani menu scene, removing any other loaded scene
+# Loads the main menu scene, removing any other loaded scene
 func load_menu() -> void:
 	remove_all_children()
 	add_child(menu_scene.instantiate())
