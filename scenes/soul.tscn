@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://cefecf8xwdrr"]
 
-[ext_resource type="Script" path="res://scripts/ghost.gd" id="1_dewtx"]
+[ext_resource type="Script" path="res://scripts/soul.gd" id="1_dewtx"]
 [ext_resource type="Texture2D" uid="uid://lcjhoqv4q21m" path="res://sprites/ghost.png" id="2_lpjn2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_88csg"]
-radius = 18.0
+radius = 23.0
 
 [node name="Soul" type="Area2D"]
 script = ExtResource("1_dewtx")
