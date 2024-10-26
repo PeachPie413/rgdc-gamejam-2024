@@ -7,6 +7,7 @@ var levelPaths = [
 
 var levels = []
 
+signal toMainMenu
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,8 +19,14 @@ func _ready() -> void:
 
 
 func load_level(index: int):
+	if (index == -1):
+		toMainMenu.emit()
+		
 	remove_all_children()
-	add_child(levels[index].instantiate())
+	var loadedLevel = levels[index].instantiate()
+	add_child(loadedLevel)
+	var exit = loadedLevel.get_node("Exit")
+	exit.door_exit.connect(load_level)
 
 
 # Removes all children of the node

@@ -25,15 +25,17 @@ func _ready() -> void:
 func load_menu() -> void:
 	remove_all_children()
 	# create menu and connect to it's start game to load game
-	var game_scene_node: MainMenu = menu_scene.instantiate()
-	add_child(game_scene_node)
-	game_scene_node.game_started.connect(load_game)
+	var menu_scene_node: MainMenu = menu_scene.instantiate()
+	add_child(menu_scene_node)
+	menu_scene_node.game_started.connect(load_game)
 
 
 # Loads the game scene, removing any other loaded scene
 func load_game() -> void:
 	remove_all_children()
-	add_child(game_scene.instantiate())
+	var game_scene_node = game_scene.instantiate()
+	add_child(game_scene_node)
+	game_scene_node.get_node("LevelManager").toMainMenu.connect(load_menu)
 
 
 # Loads the game over scene, removing any other loaded scene
