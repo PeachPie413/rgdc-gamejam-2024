@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name PlayerController extends CharacterBody2D
 
 
 # Move speed of the player in the horizontal direction
@@ -16,6 +16,10 @@ extends CharacterBody2D
 
 # how much to slow time by when dashing
 @export var time_dilation: float
+
+
+# the soul which is currently the closest to the player
+var targeted_soul: Node2D
 
 
 
@@ -64,3 +68,8 @@ func slow_time() -> void:
 		Engine.time_scale = time_dilation
 	else:
 		Engine.time_scale = 1
+
+
+# gets the closest soul and stores it as targeted soul (if any are in range)
+func get_closest_soul() -> void:
+	targeted_soul = self as Node2D
