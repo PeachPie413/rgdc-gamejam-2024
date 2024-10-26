@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/player_controller.gd" id="1_78ckb"]
 [ext_resource type="Texture2D" uid="uid://3u01xdkf441v" path="res://sprites/player.png" id="1_r4bwa"]
-[ext_resource type="Texture2D" uid="uid://b24p3t1327g8p" path="res://sprites/icon.svg" id="2_e68ts"]
+[ext_resource type="Texture2D" uid="uid://bjvkuial7ibsa" path="res://sprites/arrow.png" id="3_h75rw"]
 [ext_resource type="Script" path="res://scripts/targeted_soul_sprite.gd" id="3_o5frv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_itodu"]
@@ -27,6 +27,5 @@ texture = ExtResource("1_r4bwa")
 shape = SubResource("CapsuleShape2D_itodu")
 
 [node name="Targeted Soul Sprite" type="Sprite2D" parent="."]
-scale = Vector2(0.12, 0.12)
-texture = ExtResource("2_e68ts")
+texture = ExtResource("3_h75rw")
 script = ExtResource("3_o5frv")
