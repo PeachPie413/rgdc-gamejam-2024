@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b27uaie2m1j1u"]
+[gd_scene load_steps=4 format=3 uid="uid://b27uaie2m1j1u"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_0br5c"]
+[ext_resource type="Texture2D" uid="uid://cgo6yoe2nayx2" path="res://sprites/hell.png" id="2_rha70"]
 [ext_resource type="Theme" uid="uid://dhxh7jiais5jo" path="res://misc/main_menu_button.tres" id="3_y4afm"]
 
 [node name="MainMenu" type="Control"]
@@ -14,15 +15,7 @@ size_flags_horizontal = 6
 mouse_filter = 2
 script = ExtResource("1_0br5c")
 
-[node name="UI Root" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Content Layout" type="VBoxContainer" parent="UI Root"]
+[node name="Content Layout" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
@@ -36,22 +29,34 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="Game Title" type="Label" parent="UI Root/Content Layout"]
+[node name="Game Title" type="Label" parent="Content Layout"]
 layout_mode = 2
 theme = ExtResource("3_y4afm")
 text = "Untitled Soul Game"
 horizontal_alignment = 1
 
-[node name="Play Button" type="Button" parent="UI Root/Content Layout"]
+[node name="Play Button" type="Button" parent="Content Layout"]
 layout_mode = 2
 theme = ExtResource("3_y4afm")
 text = "Play!"
 
-[node name="Quit Button" type="Button" parent="UI Root/Content Layout"]
+[node name="Quit Button" type="Button" parent="Content Layout"]
 layout_mode = 2
 theme = ExtResource("3_y4afm")
 text = "Quit
 "
 
-[connection signal="pressed" from="UI Root/Content Layout/Play Button" to="." method="start_game"]
-[connection signal="pressed" from="UI Root/Content Layout/Quit Button" to="." method="quit_game"]
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rha70")
+expand_mode = 3
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="pressed" from="Content Layout/Play Button" to="." method="start_game"]
+[connection signal="pressed" from="Content Layout/Quit Button" to="." method="quit_game"]
