@@ -1,25 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://jw53kxw08hhj"]
+[gd_scene load_steps=4 format=3 uid="uid://2bb4xuuy8pub"]
 
 [ext_resource type="PackedScene" uid="uid://b6yko3kypwedl" path="res://scenes/level_base.tscn" id="1_x0tyx"]
 [ext_resource type="PackedScene" uid="uid://cefecf8xwdrr" path="res://scenes/soul.tscn" id="2_3nw2r"]
+[ext_resource type="PackedScene" uid="uid://bwjnawt8y3w55" path="res://scenes/player.tscn" id="3_6nmek"]
 
 [node name="Level0" type="Node2D"]
 
 [node name="Level_Base" parent="." instance=ExtResource("1_x0tyx")]
 
+[node name="Player" parent="." instance=ExtResource("3_6nmek")]
+position = Vector2(0, -24)
+
 [node name="Souls" type="Node" parent="."]
-
-[node name="Soul9" parent="Souls" instance=ExtResource("2_3nw2r")]
-position = Vector2(141, -565)
-
-[node name="Soul10" parent="Souls" instance=ExtResource("2_3nw2r")]
-position = Vector2(-2, -660)
-
-[node name="Soul11" parent="Souls" instance=ExtResource("2_3nw2r")]
-position = Vector2(-161, -735)
-
-[node name="Soul12" parent="Souls" instance=ExtResource("2_3nw2r")]
-position = Vector2(96, -834)
 
 [node name="Soul" parent="Souls" instance=ExtResource("2_3nw2r")]
 position = Vector2(5, -125)
@@ -44,3 +36,15 @@ position = Vector2(-134, -434)
 
 [node name="Soul8" parent="Souls" instance=ExtResource("2_3nw2r")]
 position = Vector2(-33, -517)
+
+[node name="Soul9" parent="Souls" instance=ExtResource("2_3nw2r")]
+position = Vector2(141, -565)
+
+[node name="Soul10" parent="Souls" instance=ExtResource("2_3nw2r")]
+position = Vector2(-2, -660)
+
+[node name="Soul11" parent="Souls" instance=ExtResource("2_3nw2r")]
+position = Vector2(-161, -735)
+
+[node name="Soul12" parent="Souls" instance=ExtResource("2_3nw2r")]
+position = Vector2(96, -834)
