@@ -52,8 +52,14 @@ alignment = 1
 [node name="WinText" type="Label" parent="Content/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_hi8jg")
-text = "You got out of hell!"
+text = "You got out of hell in"
 label_settings = SubResource("LabelSettings_qib8j")
+horizontal_alignment = 1
+
+[node name="TimeText" type="Label" parent="Content/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_hi8jg")
+text = "00:40.15"
 horizontal_alignment = 1
 
 [node name="MenuButton" type="Button" parent="Content/VBoxContainer"]
