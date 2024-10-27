@@ -6,13 +6,23 @@ class_name PlayerController extends CharacterBody2D
 
 # maximum speed the player can fall (terminal velocity)
 @export var terminal_velocity: float
-# acceleration of the player when they are going up
-@export var upwards_gravity: float
-# acceleraton of the player when they are going down
-@export var downwards_velocity: float
 
-# how fast the player jumps up (their initial velocity)
-@export var jump_force: float
+## acceleration of the player when they are going up
+#@export var upwards_gravity: float
+## acceleraton of the player when they are going down
+#@export var downwards_velocity: float
+
+## how fast the player jumps up (their initial velocity)
+#@export var jump_force: float
+
+# Peak of jump in tiles
+@export var jumpHeight: float
+
+# Time to reach the peak of the jump (seconds)
+@export var jumpTimeToPeak: float
+
+# Time to fall the distance of the jump height (seconds)
+@export var jumpTimeToFall: float
 
 # how much to slow time by when dashing
 @export var time_dilation: float
@@ -32,6 +42,10 @@ var mouse_start_pos: Vector2
 
 # direction the player wants to bash in
 var bash_direction: Vector2
+
+@onready var jumpVelocity: float = -1 * (2.0 * jumpHeight * 32) / jumpTimeToPeak
+@onready var jumpGravity: float = -1 * (-2.0 * jumpHeight * 32) / (jumpTimeToPeak * jumpTimeToPeak)
+@onready var fallGravity: float = -1 * (-2.0 * jumpHeight * 32) / (jumpTimeToFall * jumpTimeToFall)
 
 # what speed the player should be after a bash
 @export var bash_speed: float
@@ -74,14 +88,14 @@ func set_player_velocity(delta: float) -> void:
 	
 	# have the player fall
 	if velocity.y < 0:
-		velocity.y += upwards_gravity * delta
+		velocity.y += jumpGravity * delta
 	else:
-		velocity.y += downwards_velocity * delta
-	velocity.y = max(velocity.y, -terminal_velocity)
+		velocity.y += fallGravity * delta
+	#velocity.y = max(velocity.y, terminal_velocity)
 	
 	# jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = -jump_force
+		velocity.y = jumpVelocity
 
 
 

@@ -15,14 +15,14 @@ radius = 80.0
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_78ckb")
 horizontal_move_speed = 130.0
-terminal_velocity = 500.0
-upwards_gravity = 200.0
-downwards_velocity = 300.0
-jump_force = 150.0
+jumpHeight = 2.46
+jumpTimeToPeak = 0.405
+jumpTimeToFall = 0.29
 time_dilation = 0.25
-bash_speed = 300.0
+bash_speed = 500.0
 
 [node name="Camera" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
 
 [node name="Sprite" type="Sprite2D" parent="."]
 z_index = 2

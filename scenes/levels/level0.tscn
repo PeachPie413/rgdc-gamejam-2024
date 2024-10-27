@@ -14,7 +14,9 @@ tile_map_data = PackedByteArray("AAABAP7/AgAAAAAAAAACAPz/AgAAAAAAAAABAPz/AgAAAAA
 position = Vector2(448, -208)
 
 [node name="Player" parent="." instance=ExtResource("3_6nmek")]
-position = Vector2(0, -24)
+position = Vector2(34, -29)
+horizontal_move_speed = 200.0
+terminal_velocity = 1000.0
 
 [node name="Souls" type="Node" parent="."]
 
