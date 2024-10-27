@@ -19,6 +19,9 @@ class_name PlayerController extends CharacterBody2D
 # how much to slow time by when dashing
 @export var time_dilation: float
 
+# used to keep track of it the player is walking or not
+var is_walking: bool
+
 
 # the soul which is currently the closest to the player
 var targeted_soul: Soul
@@ -68,6 +71,7 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	set_player_velocity(delta)
 	move_and_slide()
+	store_is_walking()
 
 
 
@@ -99,6 +103,11 @@ func set_player_velocity(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jumpVelocity
 		player_jump.emit()
+
+
+# store if player is currently walking or not
+func store_is_walking():
+	is_walking = is_on_floor() and velocity.x != 0
 
 
 
