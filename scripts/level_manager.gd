@@ -5,7 +5,9 @@ var levelPaths = [
 	"res://scenes/levels/level1.tscn",
 	"res://scenes/levels/level2.tscn",
 	"res://scenes/levels/level3.tscn",
-	"res://scenes/levels/level4.tscn"
+	"res://scenes/levels/level4.tscn",
+	"res://scenes/levels/level5.tscn",
+	"res://scenes/levels/level6.tscn"
 ]
 
 var levels = []
