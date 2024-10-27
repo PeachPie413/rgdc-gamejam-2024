@@ -2,7 +2,8 @@ extends Node2D
 
 var levelPaths = [
 	"res://scenes/levels/level0.tscn",
-	"res://scenes/levels/level1.tscn"
+	"res://scenes/levels/level1.tscn",
+	"res://scenes/levels/level2.tscn"
 ]
 
 var levels = []
