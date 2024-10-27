@@ -1,10 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://chufsd6hcr1sa"]
+[gd_scene load_steps=5 format=3 uid="uid://chufsd6hcr1sa"]
 
 [ext_resource type="PackedScene" uid="uid://ycvqbldr7vte" path="res://scenes/level_manager.tscn" id="1_nlbik"]
 [ext_resource type="PackedScene" uid="uid://ib0uuv6pxxfy" path="res://scenes/win_screen.tscn" id="2_e5hdt"]
+[ext_resource type="Script" path="res://scripts/timer.gd" id="2_wa0pa"]
+[ext_resource type="Theme" uid="uid://dhxh7jiais5jo" path="res://misc/game_theme.tres" id="3_kphhu"]
 
 [node name="GameWorld" type="Node2D"]
 
 [node name="LevelManager" parent="." instance=ExtResource("1_nlbik")]
 
 [node name="WinScreen" parent="." instance=ExtResource("2_e5hdt")]
+
+[node name="Timer" type="CanvasLayer" parent="."]
+script = ExtResource("2_wa0pa")
+
+[node name="Label" type="Label" parent="Timer"]
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 590.0
+offset_bottom = 121.0
+theme = ExtResource("3_kphhu")
+theme_override_font_sizes/font_size = 93
+text = "beep beep"
