@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_0br5c"]
 [ext_resource type="Texture2D" uid="uid://db1ym56f8ilv2" path="res://sprites/hell.png" id="2_rha70"]
-[ext_resource type="Theme" uid="uid://dhxh7jiais5jo" path="res://misc/main_menu_button.tres" id="3_y4afm"]
+[ext_resource type="Theme" uid="uid://dhxh7jiais5jo" path="res://misc/game_theme.tres" id="3_y4afm"]
 [ext_resource type="AudioStream" uid="uid://v3vqxrdbpqwf" path="res://sound effects/button_click.wav" id="4_3h7na"]
 
 [node name="MainMenu" type="CanvasLayer"]

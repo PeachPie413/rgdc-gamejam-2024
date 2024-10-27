@@ -1,4 +1,4 @@
-extends Node
+class_name GameManager extends Node
 
 
 # [game manager]
@@ -35,7 +35,8 @@ func load_game() -> void:
 	remove_all_children()
 	var game_scene_node = game_scene.instantiate()
 	add_child(game_scene_node)
-	game_scene_node.get_node("LevelManager").toMainMenu.connect(load_menu)
+	# connect to in screen
+	game_scene_node.get_node("WinScreen").to_main_menu.connect(load_menu)
 
 
 # Loads the game over scene, removing any other loaded scene
