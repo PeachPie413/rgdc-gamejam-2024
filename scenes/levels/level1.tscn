@@ -12,23 +12,24 @@ tile_map_data = PackedByteArray("AAD+/wAAAgABAAAAAAD//wAAAgABAAAAAAAAAAAAAgABAAA
 
 [node name="Player" parent="." instance=ExtResource("2_34ykc")]
 position = Vector2(0, -20)
-horizontal_move_speed = 200.0
+horizontal_move_speed = 240.0
 time_dilation = 0.2
+bash_speed = 600.0
 
 [node name="Souls" type="Node" parent="."]
 
 [node name="Soul" parent="Souls" instance=ExtResource("3_fprko")]
-position = Vector2(84, -106)
+position = Vector2(85, -71)
 
 [node name="Soul2" parent="Souls" instance=ExtResource("3_fprko")]
-position = Vector2(1, -216)
+position = Vector2(83, -219)
 
 [node name="Soul3" parent="Souls" instance=ExtResource("3_fprko")]
-position = Vector2(2, -359)
+position = Vector2(-80, -347)
 
 [node name="Soul4" parent="Souls" instance=ExtResource("3_fprko")]
-position = Vector2(2, -518)
+position = Vector2(78, -483)
 
 [node name="Exit" parent="." instance=ExtResource("4_m05gf")]
 position = Vector2(-192, -592)
-toLevel = -1
+toLevel = 2
