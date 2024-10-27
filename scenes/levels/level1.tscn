@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://c1vix1lkiofh6"]
+[gd_scene load_steps=6 format=4 uid="uid://c1vix1lkiofh6"]
 
 [ext_resource type="PackedScene" uid="uid://bu47lndb57c34" path="res://scenes/tile_system.tscn" id="1_dn4a6"]
 [ext_resource type="PackedScene" uid="uid://bwjnawt8y3w55" path="res://scenes/player.tscn" id="2_34ykc"]
 [ext_resource type="PackedScene" uid="uid://cefecf8xwdrr" path="res://scenes/soul.tscn" id="3_fprko"]
 [ext_resource type="PackedScene" uid="uid://bdqbp4uemywty" path="res://scenes/exit.tscn" id="4_m05gf"]
+[ext_resource type="Texture2D" uid="uid://7uttatgkof6x" path="res://sprites/press_r.png" id="5_dql0r"]
 
 [node name="Level1" type="Node2D"]
 
@@ -33,3 +34,7 @@ position = Vector2(78, -483)
 [node name="Exit" parent="." instance=ExtResource("4_m05gf")]
 position = Vector2(-192, -592)
 toLevel = 2
+
+[node name="PressR" type="Sprite2D" parent="."]
+position = Vector2(-57, -107)
+texture = ExtResource("5_dql0r")

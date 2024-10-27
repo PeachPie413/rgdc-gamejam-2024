@@ -3,10 +3,14 @@ extends Node2D
 var levelPaths = [
 	"res://scenes/levels/level0.tscn",
 	"res://scenes/levels/level1.tscn",
-	"res://scenes/levels/level2.tscn"
+	"res://scenes/levels/level2.tscn",
+	"res://scenes/levels/level3.tscn",
+	"res://scenes/levels/level4.tscn"
 ]
 
 var levels = []
+
+var currentLevel = 0
 
 signal toMainMenu
 
@@ -15,10 +19,11 @@ func _ready() -> void:
 	for path in levelPaths:
 		levels.append(load(path) as PackedScene)
 	
-	load_level(0)
+	load_level(4)
 	pass # Replace with function body.
 
 
+# Load a level by its index in the list
 func load_level(index: int):
 	if (index == -1):
 		toMainMenu.emit()
@@ -28,6 +33,12 @@ func load_level(index: int):
 	add_child(loadedLevel)
 	var exit = loadedLevel.get_node("Exit")
 	exit.door_exit.connect(load_level)
+	currentLevel = index
+
+
+# Load the current level
+func reload_level():
+	load_level(currentLevel)
 
 
 # Removes all children of the node
@@ -38,4 +49,7 @@ func remove_all_children() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	# Check for the player reloading the level
+	if Input.is_action_just_pressed("restart"):
+		reload_level()
 	pass
