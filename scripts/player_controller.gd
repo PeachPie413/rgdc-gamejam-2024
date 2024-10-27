@@ -72,9 +72,17 @@ func _physics_process(delta: float) -> void:
 	set_player_velocity(delta)
 	move_and_slide()
 	store_is_walking()
+	alter_player_sprite()
 
 
 
+
+func alter_player_sprite():
+	# Flip sprite if moving leftward
+	if velocity.x < 0:
+		get_node("Sprite").flip_h = true
+	elif velocity.x > 0:
+		get_node("Sprite").flip_h = false
 
 
 # sets the velocity of the player
