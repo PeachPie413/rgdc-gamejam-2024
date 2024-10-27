@@ -1,5 +1,5 @@
-extends Node2D
-
+class_name LevelManager extends Node2D
+	
 var levelPaths = [
 	"res://scenes/levels/level0.tscn",
 	"res://scenes/levels/level1.tscn",
@@ -10,9 +10,8 @@ var levelPaths = [
 
 var levels = []
 
+signal to_win_screen
 var currentLevel = 0
-
-signal toMainMenu
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,7 +25,7 @@ func _ready() -> void:
 # Load a level by its index in the list
 func load_level(index: int):
 	if (index == -1):
-		toMainMenu.emit()
+		to_win_screen.emit()
 		
 	remove_all_children()
 	var loadedLevel = levels[index].instantiate()

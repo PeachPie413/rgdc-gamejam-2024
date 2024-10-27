@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://ib0uuv6pxxfy"]
+
+[ext_resource type="Script" path="res://scripts/win_screen.gd" id="1_x6nvk"]
+[ext_resource type="Texture2D" uid="uid://cq8mnjvje8ujo" path="res://sprites/earth.png" id="2_iiq32"]
+[ext_resource type="Theme" uid="uid://dhxh7jiais5jo" path="res://misc/game_theme.tres" id="3_hi8jg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qib8j"]
+font_size = 56
+
+[node name="WinScreen" type="CanvasLayer"]
+script = ExtResource("1_x6nvk")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_iiq32")
+expand_mode = 1
+
+[node name="Content" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 254.0
+offset_right = -254.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="textBackground" type="ColorRect" parent="Content"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11, 0.11, 0.11, 0.439216)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Content"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 157.0
+offset_bottom = -157.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="WinText" type="Label" parent="Content/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_hi8jg")
+text = "You got out of hell!"
+label_settings = SubResource("LabelSettings_qib8j")
+horizontal_alignment = 1
+
+[node name="MenuButton" type="Button" parent="Content/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_hi8jg")
+text = "Back to menu"
+
+[connection signal="pressed" from="Content/VBoxContainer/MenuButton" to="." method="load_main_menu"]
