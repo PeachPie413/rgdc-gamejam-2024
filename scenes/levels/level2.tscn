@@ -28,4 +28,4 @@ position = Vector2(320, -315)
 
 [node name="Exit" parent="." instance=ExtResource("4_q0fo7")]
 position = Vector2(480, -432)
-toLevel = -1
+toLevel = 3

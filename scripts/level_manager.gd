@@ -19,7 +19,7 @@ func _ready() -> void:
 	for path in levelPaths:
 		levels.append(load(path) as PackedScene)
 	
-	load_level(4)
+	load_level(0)
 	pass # Replace with function body.
 
 
