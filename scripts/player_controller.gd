@@ -78,8 +78,14 @@ func set_player_velocity(delta: float) -> void:
 	
 	# get horizontal input of player
 	var horizontal_input = Input.get_axis("move_left", "move_right")
-	if is_on_floor() or horizontal_input != 0:
+	# Player is free to move on the floor, and is subject to friction
+	if is_on_floor():
 		velocity.x = horizontal_input * horizontal_move_speed
+	# Player cannot be slowed if they are holding the direction they are travelling,
+	# while in the air
+	elif horizontal_input != 0:
+		if abs(velocity.x) <= abs(horizontal_move_speed) || sign(velocity.x) != sign(horizontal_input):
+			velocity.x = horizontal_input * horizontal_move_speed
 		player_run.emit()
 	
 	# have the player fall
