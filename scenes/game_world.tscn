@@ -24,9 +24,8 @@ theme = ExtResource("3_kphhu")
 theme_override_font_sizes/font_size = 93
 text = "beep beep"
 
-[node name="Music" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioListener2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_epm55")
-volume_db = -6.0
 autoplay = true
 
-[connection signal="to_win_screen" from="LevelManager" to="Music" method="stop"]
+[connection signal="to_win_screen" from="LevelManager" to="AudioListener2D" method="stop"]
