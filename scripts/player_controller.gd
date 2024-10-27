@@ -7,14 +7,6 @@ class_name PlayerController extends CharacterBody2D
 # maximum speed the player can fall (terminal velocity)
 @export var terminal_velocity: float
 
-## acceleration of the player when they are going up
-#@export var upwards_gravity: float
-## acceleraton of the player when they are going down
-#@export var downwards_velocity: float
-
-## how fast the player jumps up (their initial velocity)
-#@export var jump_force: float
-
 # Peak of jump in tiles
 @export var jumpHeight: float
 
@@ -51,6 +43,9 @@ var bash_direction: Vector2
 @export var bash_speed: float
 
 
+signal player_run
+signal player_jump
+signal player_bash
 
 
 # Called when the node enters the scene tree for the first time.
@@ -85,6 +80,7 @@ func set_player_velocity(delta: float) -> void:
 	var horizontal_input = Input.get_axis("move_left", "move_right")
 	if is_on_floor() or horizontal_input != 0:
 		velocity.x = horizontal_input * horizontal_move_speed
+		player_run.emit()
 	
 	# have the player fall
 	if velocity.y < 0:
@@ -96,6 +92,7 @@ func set_player_velocity(delta: float) -> void:
 	# jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jumpVelocity
+		player_jump.emit()
 
 
 
@@ -151,5 +148,6 @@ func store_bash_direction() -> void:
 func apply_bash() -> void:
 	if Input.is_action_just_released("dash") and targeted_soul != null:
 		velocity = bash_direction * bash_speed
+		player_bash.emit()
 		targeted_soul.bash()
 		targeted_soul = null # stop targeting the soul

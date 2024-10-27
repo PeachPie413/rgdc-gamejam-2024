@@ -5,9 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://bjvkuial7ibsa" path="res://sprites/arrow.png" id="3_h75rw"]
 [ext_resource type="Script" path="res://scripts/targeted_soul_sprite.gd" id="3_o5frv"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_itodu"]
-radius = 16.0
-height = 32.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7hrc"]
+size = Vector2(30, 31)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gsi8m"]
 radius = 80.0
@@ -29,7 +28,8 @@ z_index = 2
 texture = ExtResource("1_r4bwa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_itodu")
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_k7hrc")
 
 [node name="Targeted Soul Sprite" type="Sprite2D" parent="."]
 visibility_layer = 512
