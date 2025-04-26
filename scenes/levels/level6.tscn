@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=4 uid="uid://bho80cqv3rt5e"]
+[gd_scene load_steps=5 format=4 uid="uid://cho4w58qu21mi"]
 
 [ext_resource type="PackedScene" uid="uid://bu47lndb57c34" path="res://scenes/tile_system.tscn" id="1_5uhvv"]
 [ext_resource type="PackedScene" uid="uid://bwjnawt8y3w55" path="res://scenes/player.tscn" id="2_63pb8"]
@@ -51,8 +51,8 @@ position = Vector2(99, -753)
 position = Vector2(-59, -894)
 
 [node name="Soul12" parent="Souls" instance=ExtResource("3_bpcrr")]
-position = Vector2(0, -1081)
+position = Vector2(0, -1059)
 
 [node name="Exit" parent="." instance=ExtResource("4_q0fo7")]
-position = Vector2(0, -1232)
+position = Vector2(0, -1207)
 toLevel = -1

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bdqbp4uemywty"]
 
 [ext_resource type="Texture2D" uid="uid://djl7vew766go" path="res://sprites/door.png" id="1_bp1jp"]
-[ext_resource type="Script" path="res://scripts/exit.gd" id="1_q4bmd"]
+[ext_resource type="Script" uid="uid://o6nxn7l5n4lo" path="res://scripts/exit.gd" id="1_q4bmd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bmeu1"]
 radius = 18.0

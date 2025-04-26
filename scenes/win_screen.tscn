@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ib0uuv6pxxfy"]
 
-[ext_resource type="Script" path="res://scripts/win_screen.gd" id="1_x6nvk"]
+[ext_resource type="Script" uid="uid://l5kn2q7qr2si" path="res://scripts/win_screen.gd" id="1_x6nvk"]
 [ext_resource type="Texture2D" uid="uid://cq8mnjvje8ujo" path="res://sprites/earth.png" id="2_iiq32"]
 [ext_resource type="Theme" uid="uid://dhxh7jiais5jo" path="res://misc/game_theme.tres" id="3_hi8jg"]
 

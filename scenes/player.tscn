@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://bwjnawt8y3w55"]
 
-[ext_resource type="Script" path="res://scripts/player_controller.gd" id="1_78ckb"]
+[ext_resource type="Script" uid="uid://kfv0fidwqm1q" path="res://scripts/player_controller.gd" id="1_78ckb"]
 [ext_resource type="Texture2D" uid="uid://3u01xdkf441v" path="res://sprites/player.png" id="1_r4bwa"]
 [ext_resource type="Texture2D" uid="uid://bjvkuial7ibsa" path="res://sprites/arrow.png" id="3_h75rw"]
-[ext_resource type="Script" path="res://scripts/targeted_soul_sprite.gd" id="3_o5frv"]
+[ext_resource type="Script" uid="uid://can21raejpvu0" path="res://scripts/targeted_soul_sprite.gd" id="3_o5frv"]
 [ext_resource type="AudioStream" uid="uid://crv6gufnvcpgh" path="res://sound effects/player_bash.wav" id="5_s50qy"]
 [ext_resource type="AudioStream" uid="uid://d12m1t8y1rovl" path="res://sound effects/player_run.wav" id="6_atsth"]
-[ext_resource type="Script" path="res://scripts/walk_sfx.gd" id="7_3b5sr"]
+[ext_resource type="Script" uid="uid://cjmph1s8ls7iu" path="res://scripts/walk_sfx.gd" id="7_3b5sr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k7hrc"]
 size = Vector2(30, 31)

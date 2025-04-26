@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cefecf8xwdrr"]
 
-[ext_resource type="Script" path="res://scripts/soul.gd" id="1_dewtx"]
+[ext_resource type="Script" uid="uid://q6cy1rlqtkas" path="res://scripts/soul.gd" id="1_dewtx"]
 [ext_resource type="Texture2D" uid="uid://cse2yoda2tt3u" path="res://sprites/ghost2.png" id="2_x6peb"]
 [ext_resource type="Texture2D" uid="uid://bxxgwogbw0lyq" path="res://sprites/ghost3.png" id="3_mha32"]
 
